@@ -1,0 +1,10 @@
+.form{
+    display:inline-block;
+    border: 5px solid;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+.centrarForm{
+    width:100%; 
+    margin:0px auto;
+}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{%block title%} Team {% endblock %}
+{%block content%}
+<h1 class="mt-4">Equipo Armado</h1>
+<p>Aqui se muestra el equipo con las caracteristicas que necesitas, con algunas alternativas en caso de que no todos puedan formar parte</p>
+{% for i  in cant %}
+    {% if i != 0 %}
+    {% include "tarjetasTeam.html" with  desarrollador=i.0%}
+        <!--<h2>Estas buscando {{i.0}} desarrlladores {{i.1.0.nombre}} asd {{i.1.0.email}}  </h2> -->
+        <hr/>
+    {% endif %}
+{% endfor %}
+{% endblock %}

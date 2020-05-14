@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{%block title%} Inicio {% endblock %}
+{%block content%}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+<div class="container-fluid" style="background-image:url('{% static 'img/maxresdefault.jpg' %}');" >
+<h2 style="text-align:center; font-family:'Luckiest Guy', cursive; color:#290067;padding-top:20px;">
+Contrata la actitud y entrena la habilidad
+</h2>
+<h2 style="text-align:center; font-family:'Luckiest Guy', cursive; color:#290067;">
+El tiempo gastado en la selección es tiempo bien gastado
+</h2>
+<h2 style="text-align:center; font-family:'Luckiest Guy', cursive; color:#290067;">
+"Estoy convencido que nada de lo que hacemos es más importante que contratar y desarrollar personas. Y al final del día, apuestas por la gente, no por estrategias."-Lawrence Bossidy
+</h2>
+    <div style="text-align:center; margin-top:50px;">
+        <form role="form" class="form" action="" method="" enctype="multipart/form-data">
+        <div class="form-group">
+            <p>Selecciona o arrastra un archivo</p>
+            <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple>
+        </div>
+        <button type="submit" class="btn btn-default btn-info">Submit</button>
+        </form>
+        <form class="form" role="form" action="" method="" enctype="multipart/form-data">
+        <div class="form-group">
+            <p>Selecciona o arrastra un directorio</p>
+            <input type="file" id="ctrl" webkitdirectory directory multiple/>
+        </div>
+        <button type="submit" class="btn btn-default btn-info">Submit</button>
+        </form>
+    </div>
+    <div style="text-align:center; margin-top:50px;">
+        <form>
+          <div class="form-group" style="width:80%; margin:auto;">
+            <label for="exampleFormControlTextarea1">Copia el CV que quieres analizar</label>
+            <textarea class="form-control" name="mensaje" rows="5"></textarea>
+            <button type="submit" class="btn btn-default btn-info">Analizar</button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

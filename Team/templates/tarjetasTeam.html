@@ -1,0 +1,25 @@
+<div class="container-fluid">
+          <section class="text-center team" style="margin-top:0;">
+              <div class="container p-5">
+                <div class="row">
+                  <!-- USER TEAM -->
+                
+                {% for dev  in desarrollador %} 
+               <!--  <div>{{ forloop.counter }}</div>-->
+                    <div class="col-md-3" style="width:100%; margin:0px auto; padding-top:20px;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>{{dev.nombre}}</h3>
+                                <p>El Area es: {{dev.area}}</p>
+                                <p>Los lenguajes son: {{dev.lenguajes}}</p>
+                                <p>Los lenguajes son: {{dev.rating}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+               
+                </div>
+              </div>
+          </section>
+
+      </div>

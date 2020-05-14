@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{%block title%} Team {% endblock %}
+{%block content%}
+<link rel="stylesheet" href="{% static 'css/estilos2.css' %}">
+<div class="container-fluid" style="background-image:url('{% static 'img/maxresdefault.jpg' %}');" >
+    <h2 style="text-align:center; font-family:'Luckiest Guy', cursive; color:#290067;padding-top:20px;">
+    Estas aqui para elegir a el team que deseas para el fin que estas buscando
+    </h2>
+    <h2 style="text-align:center; font-family:'Luckiest Guy', cursive; color:#290067;padding-top:20px;">
+    Recorda que trabajar duro solo por interes ESTRESA, pero trabajar duro por lo que amamos APASIONA
+    </h2>
+    <h2 style="text-align:center; font-family:'Luckiest Guy', cursive; color:#290067;padding-top:20px;">
+    Puedes buscar la cantidad que quieras, en el area o lenguaje que necesites, o ambas por ejemplo:
+    2 backend python, o 2 backend, o 2 python
+    </h2>
+    <div  class="container" style=" text-align:center; margin-top:50px;">
+        <form class="form-inline" action="/team/" method="POST"> {% csrf_token %}
+            <div class="centrarForm">
+                <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Ingresa una cantidad" name="cant1">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el area" name="area1">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el lenguaje" name="leng1">
+            </div> 
+            <div class="centrarForm">
+                <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Ingresa una cantidad" name="cant2">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el area" name="area2">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el lenguaje" name="leng2">
+            </div>
+            <div class="centrarForm">
+                <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Ingresa una cantidad" name="cant3">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el area" name="area3">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el lenguaje" name="leng3">
+            </div>
+            <div class="centrarForm">
+                <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Ingresa una cantidad" name="cant4">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el area" name="area4">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el lenguaje" name="leng4">
+            </div>
+            <div class="centrarForm">
+                <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Ingresa una cantidad" name="cant5">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el area" name="area5">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el lenguaje" name="leng5">
+            </div>
+            <div class="centrarForm">
+                <input type="number" class="form-control mb-2 mr-sm-2" placeholder="Ingresa una cantidad" name="cant6">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el area" name="area6">
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Ingesa el lenguaje" name="leng6">
+            </div>
+            <div class="centrarForm">
+            <button type="submit" class="btn btn-primary mb-2">Encuentra mi equipo</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
